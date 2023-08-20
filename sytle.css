@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+}
+
+.mini-circle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 21;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    user-select: none;
+}
+
+.nav {
+    width: 100%;
+    padding: 20px 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 20;
+    background-color: black;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.s2 {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    position: relative;
+    bottom: 27px;
+    cursor: pointer;
+}
+
+.s {
+    overflow: hidden;
+    width: fit-content;
+    height: 27px;
+}
+
+.b {
+    display: inline-block;
+    position: relative;
+    bottom: 27px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.b::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transition: 0.5s;
+}
+
+.b:hover::after {
+    width: 100%;
+}
+
+/* nav ends */
+.main {
+    width: 100%;
+    background-color: black;
+}
+
+/* hero section */
+.hero {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero h1 {
+    width: fit-content;
+    position: relative;
+    top: 11rem;
+    padding-left: 5vw;
+    font-size: 10vw;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 700;
+    z-index: 1;
+    padding-top: 2vw;
+}
+
+.hero .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    top: 15vw;
+    z-index: 5;
+    margin-left: 5vw;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.hero img {
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50vw;
+
+}
+
+.second {
+    margin-top: 15vw;
+    width: 274vw;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    height: 100vh;
+    padding: 3vw 2vw;
+}
+
+.title {
+    top: -5vw;
+    position: relative;
+    padding-left: 3vw;
+}
+
+.overview h4 {
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.overview h3 {
+    display: block;
+}
+
+.overview p {
+    padding-top: 1rem;
+    line-height: 1.5;
+    width: 18%;
+    font-size: 1.2vw;
+}
+
+.overview button {
+    background: none;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 35px;
+    margin: 1rem 0%;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+.overview button:hover {
+    opacity: 0.6;
+    background-color: white;
+    color: #000;
+    transform: scale(0.9);
+}
+
+.showcase {
+    width: 100%;
+    height: 180vh;
+    background-color: #060606;
+    /* mix-blend-mode: multiply; */
+}
+.mobile{
+    display: none;
+}
+.showcase .row-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-1,
+.col-2 {
+    background-color: #100f0f;
+}
+
+.col-1 img,
+.col-2 img {
+    padding: 5vw;
+}
+
+.col-2 {
+    margin-left: 8vw;
+}
+
+.showcase .preview {
+
+    color: #fff;
+    opacity: 0.6;
+}
+
+.showcase .preview h1 {
+    padding-left: 2vw;
+    padding-bottom: 5vw;
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+
+/* Tech -stack */
+
+.tech-title h1 {
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 4vw;
+    width: fit-content;
+    padding-left: 2vw;
+    margin-top: 4vw;
+    margin-bottom: -4vw;
+}
+
+.logos {
+    margin-top: 5vw;
+    padding: 60px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 5vw;
+}
+
+.logos::after,
+.logos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2vw;
+    height: 100%;
+    z-index: 2;
+
+}
+
+.logos::before {
+    left: 0;
+    background: linear-gradient(to left, rgb(255, 255, 255, 0), rgb(31, 31, 31));
+}
+
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(31, 31, 31));
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos:hover .logo-slide {
+    animation-play-state: paused;
+}
+
+.logo-slide {
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logo-slide img {
+    margin: 0 80px;
+    height: 80px;
+}
+
+/* Next project */
+.next {
+    color: #fff;
+    background-color: black;
+    width: 100%;
+    padding: 0 4vw 0 4vw;
+}
+
+.next .next-text {
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.elem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    padding: 3.5vw 4vw;
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+
+.elem h1 {
+    margin-left: -2vw;
+    text-transform: uppercase;
+    font-size: 8vw;
+    opacity: 0.7;
+    transition: all 0.8s ease;
+}
+
+.elem h1:hover {
+    transform: translateX(12%);
+    opacity: 20%;
+}
+
+.elemlast {
+    border-bottom: 1px solid #888;
+}
+
+/* Footer  */
+
+.footer {
+    width: 100%;
+    color: white;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw 0 2vw;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-left h5 {
+    font-size: 15px;
+}
+
+.footer a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer .footer-right a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transition: 0.5s;
+
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
